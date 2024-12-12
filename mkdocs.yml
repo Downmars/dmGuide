@@ -1,5 +1,13 @@
-site_name: dnGuide
+site_name: "dmGuide"
 nav:
   - Home: index.md
   - About: about.md
-theme: readthedocs
+  - App:
+    - LazyVim:
+      - Download: App/LazyVim/download.md 
+      - Keybindings: App/LazyVim/keybindings.md 
+    - Rclone:
+      - Download: App/Rclone/download.md 
+      - Configuration: App/Rclone/configuration.md 
+theme: rtd-dropdown
+site_author: Downmars
