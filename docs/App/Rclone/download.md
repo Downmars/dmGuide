@@ -5,24 +5,28 @@
 
 ---
 
-## 1. download
+## download rclone  
 
 ```
+# check if rclone is available in the Pacman repository  
 sudo pacman -Ss rclone  
 sudo pacman -S rclone  
 ```
+
+To mount **alist** to the local system, you need to first set up the **reclone remote**. [The rclone documentation](https://rclone.org/webdav/) explains this clearly, or you can follow the commands below:
+
 ```
-# 进入rclone设置  
+# enter rclone configurations    
 rclone config
 
-# 选择新远程
+# choose new remote  
 No remotes found, make a new one?
 n) New remote
 s) Set configuration password
 q) Quit config
-n/s/q> n #这里选择n
+n/s/q> n # we choose n
 
-# 设置名字
+# set your remote name  
 name> remote
 Type of storage to configure.
 Choose a number from below, or type in your own value
@@ -30,16 +34,16 @@ Choose a number from below, or type in your own value
 XX / WebDAV
    \ "webdav"
 [snip]
-Storage> webdav #这里输入远程的名字，之后就是你的远程名称
+Storage> webdav # it will be your remote name  
 
-# 设置远程地址url http://your_alist_ip:port/dav
+# set remote url http://your_alist_ip:port/dav
 URL of http host to connect to
 Choose a number from below, or type in your own value
  1 / Connect to example.com
    \ "https://example.com"
-url> http://127.0.0.1:8080/dav #这里设置alist的地址和端口，后面要带dav，这是alist要求的
+url> http://127.0.0.1:5244/dav # here, set the alist address and port, followed by "dav", as required by alist  
 
-# 这里选6就可以了，1-5都不是我们使用的
+# we choose 6  
 Name of the WebDAV site/service/software you are using
 Choose a number from below, or type in your own value
  1 / Fastmail Files
@@ -56,43 +60,114 @@ Choose a number from below, or type in your own value
    \ (other)
 vendor> 6
 
-# 设置远程账号
+# enter your remote account  
 User name
-user> admin #这里是你alist的密码
+user> admin # this is your alist user   
 
-# 设置远程密码
+# enter your remote password  
 Password.
 y) Yes type in my own password
 g) Generate random password
 n) No leave this optional password blank
-y/g/n> y #这里输入y
-Enter the password: #这输入你的密码，密码是看不到的
+y/g/n> y # enter y  
+Enter the password: # enter your password, but you cannont see it 
 password:
-Confirm the password: #再次输入你的密码
+Confirm the password: # enter again
 password:
 
-# 这里直接回车即可
+# press enter  
 Bearer token instead of user/pass (e.g. a Macaroon)
 bearer_token>
 Remote config
 
-# 这里可能会问你是默认还是高级，选择默认即可
+# choose default  
 
-# 你的远程信息
+# your remote message
 --------------------
 [remote]
 type = webdav
-url = http://127.0.0.1:8080/dav
+url = http://127.0.0.1:5244/dav
 vendor = Other
 user = admin
 pass = *** ENCRYPTED ***
 --------------------
 
-# 确认
+# confirm  
 y) Yes this is OK
 e) Edit this remote
 d) Delete this remote
-y/e/d> y #输入y即可，
+y/e/d> y # enter y  
 
-# 最后按q退出设置
+# enter "q" to exit  
 ```
+
+## mount to local system  
+
+To check if it's connected, you can use the following command to confirm if `alist` is mounted.
+
+```
+# check the alist directory.
+rclone lsd alist:
+
+# check the files of alist.
+rclone ls alist:
+```
+
+```
+# Mount the alist directory to the local directory /mnt/Webdev/, this is a foreground command, and it will get stuck after running.
+rclone mount alist:/ /webdav  --copy-links --no-gzip-encoding --no-check-certificate --allow-other --allow-non-empty --umask 000 --use-mmap
+```
+
+```
+# check the local mount location.
+df -h  
+
+# the output result wiil be similar to :
+Alist:               1.0P     0  1.0P   0% /mnt/Webdev
+```
+
+```
+# unmount the local mount.
+fusermount -qzu /webdav  
+```
+
+## set up to start automatically on boot  
+
+You need to run these with root privileges.
+```
+# edit a server file  
+vim /usr/lib/systemd/system/rclone.service
+
+# /usr/lib/systemd/system/rclone.service
+[Unit] 
+Description=rclone
+Before=network.service
+
+[Service] 
+User=root 
+ExecStart=/usr/bin/rclone mount alist: /mnt/Webdev/  --copy-links --no-gzip-encoding --no-check-certificate --allow-other --allow-non-empty --umask 000 --use-mmap
+
+[Install] 
+WantedBy=multi-user.target
+
+```
+
+```
+# reload the daemon process  
+systemctl daemon-reload
+
+# set up the service file to start automatically  
+systemctl enable rclone.service
+
+# start service file  
+systemctl start rclone.service
+
+# check ths status of service file  
+systemctl status rclone.service  
+
+```  
+
+---
+### partial references:
+[https://willxup.top/archives/deploy-alist-and-rclone](https://willxup.top/archives/deploy-alist-and-rclone)
+

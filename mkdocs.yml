@@ -8,6 +8,13 @@ nav:
       - Keybindings: App/LazyVim/keybindings.md 
     - Rclone:
       - Download: App/Rclone/download.md 
-      - Configuration: App/Rclone/configuration.md 
-theme: rtd-dropdown
+      - Configuration: App/Rclone/configuration.md  
+    - Clash:  
+      - Configuration: App/Clash/configuration.md 
+    - Mkdocs:
+      - Configuration: App/Mkdocs/configuration.md
+    - Anaconda:  
+      - Configuration: App/Anaconda/configuration.md
+theme: 
+  name: mkdocs
 site_author: Downmars
