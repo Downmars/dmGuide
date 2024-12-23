@@ -3,6 +3,8 @@ nav:
   - Home: index.md
   - About: about.md
   - App:
+    - Configuration:
+      - Configuration: App/Configuration/configuration.md
     - LazyVim:
       - Download: App/LazyVim/download.md 
       - Keybindings: App/LazyVim/keybindings.md 
@@ -17,6 +19,18 @@ nav:
       - Configuration: App/Anaconda/configuration.md
     - Waybar:  
       - Configuration: App/Waybar/configuration.md  
+    - Go-musicfox:
+      - Configuration: App/Go-musicfox/configuration.md  
+    - Screenshot:
+      - Configuration: App/Screenshot/configuration.md  
+    - Screenrecord:
+      - Configuration: App/Screenrecord/configuration.md
+    - Pasteboard:
+      - Configuration: App/Pasteboard/configuration.md
+    - Download:
+      - Configuration: App/Download/configuration.md
+    - Dotfiles:
+      - Configuration: App/Dotfiles/configuration.md
 theme: 
   name: mkdocs
 site_author: Downmars

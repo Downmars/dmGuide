@@ -73,9 +73,32 @@ Befor start talking about modules and how to configure them, we want to write th
   "modules-right": ["battery", "clock"]
 }
 ```
+The guide you want to know is how to make a custom module, i will give some suggestions. Other default module you can see in [Wiki](https://github.com/Alexays/Waybar/wiki).
+## Module: Custom 
 
+Addressed by `custom/<name>`  
 
+| option | typeof | default | description |  
+|:---:|:---:|:---:|---|  
+| exec | string | / | / |
+| `exec-if` | string | / | The path to a script, which determines if the script in `exec` should be executed. `exec` will be executed if the exit code of `exec-if` equals 0. |
+| `exec-on-event` | bool | true | If an event command is set (e.g. `on-click` or `on-scroll-up`) then reexecute the script.<br> There are no guarantees that `exec` is executed after the `on-*` event commands finished. See [https://github.com/Alexays/Waybar/pull/1784](https://github.com/Alexays/Waybar/pull/1784) for a possible patch. |  
+| `hide-empty-text` | bool | false | (version >= 0.10.3) Disable the module when the output is empty, but format might contain additional static content. |  
+| `return-type` | string | / | See in [return-type](https://github.com/Alexays/Waybar/wiki/Module:-Custom#module-custom-config-return-type) |  
+| `interval` | integer | / | The interval (s) in which the information gets polled.<br> Use `once` if you want to execute the module only on startup. You can update it manually with a signal. If on `interval` is defined, it is assumed that the output script loops it self. |  
+| `restart-interval` | integer | / | The restart interval (s). Can't be used with the `interval` option, so only with continuous scripts. Once the script exit, it'll be re-executed after the `restart-interval`. |
+| `signal` | integer | / | The signal number used to update the module. The number is vaild between 1 and N, where `SIGRTMIN + N` = `SIGRTMAX`. |
+| `format` | string | {} | The format, how information should be displayed. On `{}` date gets inserted. |
+| `format-icons` | array/odject/string | / | If the type is an array, then based on the set percentage, the corresponding icon gets selected (low -> high). <br> If the type is an object, then the icon will be selected according to `alt` string from the output. <br> If the type is a string, it will be pasted as is. <br> **NOTE**:Arrays can be nested into objects. Icons will be selected first according to `alt` the percentage. |
+| `rotate` | integer | / | Positive value to rotate the lable. |
+| `max-length` | integer | / | The maximum length in character the module should display. |
+| `on-click` | string | / | Command to execute when clicked on the module. |
+| `on-click-{middle, right}` | string | / | Command to execute when you {middle clicked, right clicked} on the module. |
+| `on-scroll-{up, down}` | string | / | Command to execute when scrolling {up, down} on the module. |
+| `smooth-scrolling-threshold` | double | / | Threshold to be used when scrolling. |
+| `tooltip` | bool | true | Option to enable tooltip on hover. |
+| `tooltip-format` | string | / | The format of the tooltip. |
+| `escape` | bool | false | Option to enable escaping of script output. |
 
-
-
-
+#### Return-Type: 
+When `return-type` is set to `json`, Waybar expects the `exec-script` to output its data in JSON format. This should look like this :`{"text": "$text", "alt": "$alt", "tooltip": "$tooltip", "class": "$class", "percentage": "$percentage" }`. 
