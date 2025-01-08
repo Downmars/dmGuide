@@ -31,6 +31,10 @@ nav:
       - Configuration: App/Download/configuration.md
     - Dotfiles:
       - Configuration: App/Dotfiles/configuration.md
+    - FzfMenu:
+      - Configuration: App/FzfMenu/configuration.md
+    - GptAnswer:
+      - Answer: App/GptAnswer/index.md
 theme: 
   name: mkdocs
 site_author: Downmars
