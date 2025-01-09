@@ -34,11 +34,7 @@ nav:
     - FzfMenu:
       - Configuration: App/FzfMenu/configuration.md
     - GptAnswer:
-      - how_can_i_use_task?: App/GptAnswer/how_can_i_use_task?.md
-      - how_to_run_desktop_in_terminal?: App/GptAnswer/how_to_run_desktop_in_terminal?.md
-      - how_to_use_sed?: App/GptAnswer/how_to_use_sed?.md
-      - why_my_fzfmenu_perfer_different_in_terminal_and_keybinging?: App/GptAnswer/why_my_fzfmenu_perfer_different_in_terminal_and_keybinging?.md
-    - MyWiki:
+
 theme: 
   name: mkdocs
 site_author: Downmars
