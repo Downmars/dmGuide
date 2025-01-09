@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="Downmars">
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>how_to_run_desktop_in_terminal? - dmGuide</title>
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../../css/brands.min.css" rel="stylesheet">
+        <link href="../../../css/solid.min.css" rel="stylesheet">
+        <link href="../../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../..">dmGuide</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../../about/" class="nav-link">About</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">App</a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Configuration</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../Configuration/configuration/" class="dropdown-item">Configuration</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">LazyVim</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../LazyVim/download/" class="dropdown-item">Download</a>
+</li>
+            
+<li>
+    <a href="../../LazyVim/keybindings/" class="dropdown-item">Keybindings</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Rclone</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../Rclone/configuration/" class="dropdown-item">Download</a>
+</li>
+            
+<li>
+    <a href="../../Rclone/configuration/" class="dropdown-item">Download</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Clash</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../Clash/configuration/" class="dropdown-item">Configuration</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Mkdocs</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../Mkdocs/configuration/" class="dropdown-item">Configuration</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Anaconda</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../Anaconda/configuration/" class="dropdown-item">Configuration</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Waybar</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../Waybar/configuration/" class="dropdown-item">Configuration</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Go-musicfox</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../Go-musicfox/configuration/" class="dropdown-item">Configuration</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Screenshot</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../Screenshot/configuration/" class="dropdown-item">Configuration</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Screenrecord</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../Screenrecord/configuration/" class="dropdown-item">Configuration</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Pasteboard</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../Pasteboard/configuration/" class="dropdown-item">Configuration</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Download</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../Download/configuration/" class="dropdown-item">Configuration</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Dotfiles</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../Dotfiles/configuration/" class="dropdown-item">Configuration</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">GptAnswer</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../how_can_i_use_task%3F/" class="dropdown-item">how_can_i_use_task?</a>
+</li>
+            
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">how_to_run_desktop_in_terminal?</a>
+</li>
+            
+<li>
+    <a href="../how_to_use_sed%3F/" class="dropdown-item">how_to_use_sed?</a>
+</li>
+            
+<li>
+    <a href="../why_my_fzfmenu_perfer_different_in_terminal_and_keybinging%3F/" class="dropdown-item">why_my_fzfmenu_perfer_different_in_terminal_and_keybinging?</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">FzfMenu</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../FzfMenu/configuration/" class="dropdown-item">Configuration</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../how_can_i_use_task%3F/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../how_to_use_sed%3F/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            
+            
+            
+            
+            
+            
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<p>要将执行 <code>.desktop</code> 文件的功能封装成一个指令，比如 <code>rundesktop xx.desktop</code>，你可以创建一个自定义的 Shell 脚本来实现这个功能。以下是一个简单的步骤，帮助你将这个功能封装成一个命令。</p>
+<h3 id="1">步骤 1: 创建一个脚本文件</h3>
+<p>在你的 <code>~/bin/</code> 或系统的 <code>PATH</code> 目录下创建一个脚本文件（例如 <code>rundesktop</code>）。这里我们假设你在 <code>~/bin/</code> 目录下创建它。</p>
+<ol>
+<li>打开终端，创建一个新脚本文件：</li>
+</ol>
+<p><code>sh
+   touch ~/bin/rundesktop</code></p>
+<ol>
+<li>编辑脚本文件：</li>
+</ol>
+<p><code>sh
+   nano ~/bin/rundesktop</code></p>
+<h3 id="2">步骤 2: 编写脚本内容</h3>
+<p>在脚本中写入以下内容：</p>
+<pre><code class="language-sh">#!/bin/bash
+
+# 检查是否提供了 .desktop 文件作为参数
+if [ -z &quot;$1&quot; ]; then
+    echo &quot;Usage: rundesktop &lt;desktop-file&gt;&quot;
+    exit 1
+fi
+
+# 获取 .desktop 文件路径
+desktop_file=&quot;$1&quot;
+
+# 检查文件是否存在
+if [ ! -f &quot;$desktop_file&quot; ]; then
+    echo &quot;File $desktop_file not found.&quot;
+    exit 1
+fi
+
+# 使用 grep 提取 Exec 命令并执行
+exec_command=$(grep -i 'Exec' &quot;$desktop_file&quot; | sed 's/^.*=//')
+
+# 检查是否成功提取到 Exec 命令
+if [ -z &quot;$exec_command&quot; ]; then
+    echo &quot;No Exec command found in $desktop_file.&quot;
+    exit 1
+fi
+
+# 执行提取到的命令
+eval &quot;$exec_command&quot;
+</code></pre>
+<h3 id="3">步骤 3: 使脚本可执行</h3>
+<p>保存文件并退出编辑器。然后，通过以下命令使脚本变为可执行：</p>
+<pre><code class="language-sh">chmod +x ~/bin/rundesktop
+</code></pre>
+<h3 id="4-bin-path">步骤 4: 确保 <code>~/bin/</code> 在 <code>PATH</code> 中</h3>
+<p>确保 <code>~/bin/</code> 目录在你的 <code>PATH</code> 环境变量中。你可以通过以下命令检查 <code>~/bin/</code> 是否已经在 <code>PATH</code> 中：</p>
+<pre><code class="language-sh">echo $PATH
+</code></pre>
+<p>如果没有，你可以在 <code>~/.bashrc</code> 或 <code>~/.zshrc</code> 文件中添加以下行：</p>
+<pre><code class="language-sh">export PATH=&quot;$HOME/bin:$PATH&quot;
+</code></pre>
+<p>然后，重新加载配置文件：</p>
+<pre><code class="language-sh">source ~/.bashrc  # 如果你用的是 bash
+# 或者
+source ~/.zshrc   # 如果你用的是 zsh
+</code></pre>
+<h3 id="5-rundesktop">步骤 5: 使用 <code>rundesktop</code></h3>
+<p>现在你可以使用 <code>rundesktop</code> 命令来运行任何 <code>.desktop</code> 文件了。假设你有一个 <code>telegram.desktop</code> 文件，使用如下命令：</p>
+<pre><code class="language-sh">rundesktop /usr/share/applications/telegram.desktop
+</code></pre>
+<h3 id="_1">脚本解释</h3>
+<ol>
+<li><strong>检查是否提供 <code>.desktop</code> 文件</strong>：</li>
+<li>
+<p><code>if [ -z "$1" ]; then</code> 检查脚本是否接收到了参数（即 <code>.desktop</code> 文件路径）。</p>
+</li>
+<li>
+<p><strong>检查 <code>.desktop</code> 文件是否存在</strong>：</p>
+</li>
+<li>
+<p><code>if [ ! -f "$desktop_file" ]; then</code> 检查文件是否存在。</p>
+</li>
+<li>
+<p><strong>提取 <code>Exec</code> 行并执行命令</strong>：</p>
+</li>
+<li><code>grep -i 'Exec' "$desktop_file"</code> 用来提取 <code>.desktop</code> 文件中的 <code>Exec</code> 行。</li>
+<li><code>sed 's/^.*=//'</code> 用来去掉 <code>Exec=</code> 前缀，只保留命令部分。</li>
+<li><code>eval "$exec_command"</code> 执行提取到的命令。</li>
+</ol>
+<p>通过这种方式，你可以通过 <code>rundesktop</code> 命令来启动任何 <code>.desktop</code> 文件所指定的应用程序。</p>
+<h3 id="_2">总结</h3>
+<p>你现在已经成功封装了一个命令 <code>rundesktop</code>，用于通过 <code>.desktop</code> 文件启动应用程序。只需传入 <code>.desktop</code> 文件路径，脚本会自动提取并执行其中的命令。</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js"></script>
+        <script src="../../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
